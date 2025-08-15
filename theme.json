@@ -7,14 +7,29 @@
     "color": {
       "palette": [
         {
-          "slug": "primary",
-          "color": "#009781",
-          "name": "Primary"
+          "slug": "light-blue",
+          "color": "#76B9F0",
+          "name": "Light Blue"
         },
         {
-          "slug": "secondary",
-          "color": "#E5134E",
-          "name": "Secondary"
+          "slug": "light-blue-2",
+          "color": "#5F9AC6",
+          "name": "Light Blue 2"
+        },
+        {
+          "slug": "brown",
+          "color": "#DDAA52",
+          "name": "Brown"
+        },
+        {
+          "slug": "red",
+          "color": "#FF1616",
+          "name": "Red"
+        },
+        {
+          "slug": "common-black",
+          "color": "#0b0000",
+          "name": "Common Black"
         },
         {
           "slug": "dark-grey",
@@ -37,28 +52,22 @@
         {
           "name": "Small",
           "slug": "small",
-          "size": "11px"
+          "size": "14px"
         },
         {
           "name": "Medium",
           "slug": "medium",
-          "size": "14px"
+          "size": "18px"
         },
         {
           "name": "Large",
           "slug": "large",
-          "size": "20px",
-          "fluid": false
-        },
-        {
-          "name": "Extra Large",
-          "slug": "x-large",
-          "size": "35px"
+          "size": "32px"
         },
         {
           "name": "Extra extra Large",
           "slug": "xx-large",
-          "size": "60px"
+          "size": "36px"
         }
       ]
     },
