@@ -35,6 +35,11 @@
           "slug": "dark-grey",
           "color": "#212121",
           "name": "Darkgrey"
+        },
+        {
+          "slug": "golden-yellow",
+          "color": "#F4D03F",
+          "name": "Golden Yellow"
         }
       ]
     },

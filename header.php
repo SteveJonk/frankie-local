@@ -9,17 +9,10 @@
 </head>
 
 <body <?php body_class('flex flex-col h-screen') ?>>
-    <?php wp_body_open(); ?>
+    <?php wp_body_open();
+    get_template_part('template-parts/navbar-menu');
+    ?>
 
-    <header class="fixed flex-0 bg-slate-100 px-4 border shadow-md z-20 w-full">
-        <div class="max-w-screen-lg mx-auto flex justify-between items-center min-h-[40px]">
-            <div class="">
-                <a href="<?php echo home_url() ?>">Logo</a>
-            </div>
-            <div>
-                <?php echo wp_nav_menu() ?>
-            </div>
-        </div>
-    </header>
+
 
     <main class="flex-grow">
