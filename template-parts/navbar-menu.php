@@ -1,21 +1,29 @@
 <a href="<?php echo home_url() ?>"><img src="<?php echo get_theme_mod('navbar_logo'); ?>"
-        class="z-30 absolute left-8 top-2" type="image/x-icon" alt="header logo" height="300" width="300"
-        loading="eager"></a>
+        class="z-30 absolute left-8 top-2 sm:block hidden" type="image/x-icon" alt="header logo" height="300"
+        width="300" loading="eager"></a>
 
 <header id="navbar"
     class="fixed flex justify-between z-20 w-full py-4 px-8 transition-transform duration-100 ease-in-out bg-gradient-to-b from-black/20 to-transparent">
     <a href="<?php echo home_url() ?>"><img id="navbar-logo" src="<?php echo get_theme_mod('navbar_logo'); ?>"
             class="max-w-[40vw] transition-transform duration-100 ease-in-out origin-top-left" type="image/x-icon"
             alt="header logo" height="150" width="150" loading="eager"></a>
-    <button id="navbar-button" aria-label="open menu"
-        class="menu-icon text-white gap-0 flex flex-col items-center font text-xs transition-transform duration-300 hover:scale-110">
-        <svg class="mb-[-3px]" width="40px" height="40px" viewBox="0 0 24 24" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg>
-        MENU
-    </button>
+    <div class="flex items-center">
+        <div class="hidden sm:block mr-8">
+            <?php
+            if (is_active_sidebar('menu-button')) {
+                dynamic_sidebar('menu-button');
+            } ?>
+        </div>
+        <button id="navbar-button" aria-label="open menu"
+            class="menu-icon text-white gap-0 flex flex-col items-center font text-xs transition-transform duration-300 hover:scale-110">
+            <svg class="mb-[-3px]" width="40px" height="40px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#ffffff" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            MENU
+        </button>
+    </div>
 
 </header>
 
