@@ -2,8 +2,8 @@
 
     <footer>
         <?php
-        if (is_active_sidebar('menu-bottom')) {
-            dynamic_sidebar('menu-bottom');
+        if (is_active_sidebar('footer')) {
+            dynamic_sidebar('footer');
         } ?>
 
     </footer>
