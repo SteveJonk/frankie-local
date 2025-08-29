@@ -1,9 +1,36 @@
-<header class="fixed flex-0 z-20 w-full p-8">
-    <button>
-        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
-                fill="#000000" />
+<header id="navbar" class="fixed flex justify-between z-20 w-full p-4">
+    <a href="<?php echo home_url() ?>"><img src="<?php echo get_theme_mod('navbar_logo'); ?>" type="image/x-icon"
+            alt="header logo" height="100" width="100" loading="eager"></a>
+    <button id="navbar-button" aria-label="open menu"
+        class="menu-icon text-white gap-0 flex flex-col items-center font text-xs transition-transform duration-300 hover:scale-110">
+        <svg class="mb-[-3px]" width="40px" height="40px" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
         </svg>
+        MENU
     </button>
 </header>
+
+<div id="menu" role="dialog"
+    class="opacity-0 fixed left-0 w-full h-full bg-white z-30 pointer-events-none transition-opacity duration-300 ease-in-out top-0">
+    <button id="close-menu" aria-label="close menu" class="absolute top-5 right-5 z-10">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="5 5 14 14" width="40" height="40">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                fill="#0F1729"></path>
+        </svg></button>
+    <div class="w-full h-full bg-white">
+        <?php
+        if (is_active_sidebar('menu')) {
+            dynamic_sidebar('menu');
+        }
+        ?>
+        <?php
+        if (is_active_sidebar('menu-bottom')) {
+            dynamic_sidebar('menu-bottom');
+        }
+        ?>
+    </div>
+
+</div>

@@ -22,9 +22,6 @@ require_once "inc/components/group-block-style.php";
 require_once "inc/components/image-block-style.php";
 require_once "inc/style-editor.php";
 
-// Include Gutenberg Blocks
-require_once "inc/gutenberg-blocks/example-block/example-block.php";
-
 function theme_support()
 
 {

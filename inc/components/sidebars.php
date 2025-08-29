@@ -11,9 +11,9 @@ function theme_sidebars()
     ));
 
     register_sidebar(array(
-        'name' => 'Menu bottom',
-        'id' => 'menu-bottom',
-        'description' => 'Deze sidebar zal worden getoond onderaan het uitklapbare menu',
+        'name' => 'Menu knop',
+        'id' => 'menu-button',
+        'description' => 'Deze sidebar zal worden getoond naast de menu knop',
         'before_widget' => '',
         'after_widget' => '',
     ));

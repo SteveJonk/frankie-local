@@ -1,13 +1,20 @@
 {
+  "assets/fonts/LeagueSpartanVariable.woff2": {
+    "file": "assets/LeagueSpartanVariable-6d17eb47.woff2",
+    "src": "assets/fonts/LeagueSpartanVariable.woff2"
+  },
   "main.css": {
-    "file": "assets/main-82ac0220.css",
+    "file": "assets/main-59711fe6.css",
     "src": "main.css"
   },
   "main.js": {
-    "css": [
-      "assets/main-82ac0220.css"
+    "assets": [
+      "assets/LeagueSpartanVariable-6d17eb47.woff2"
     ],
-    "file": "assets/main-9cbdd7ab.js",
+    "css": [
+      "assets/main-59711fe6.css"
+    ],
+    "file": "assets/main-c0dfe5ca.js",
     "isEntry": true,
     "src": "main.js"
   }

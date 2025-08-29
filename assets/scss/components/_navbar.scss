@@ -1,0 +1,36 @@
+#menu {
+  a {
+    position: relative;
+    & img {
+      display: inline-block;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 1px;
+      background-color: var(--wp--preset--color--dark-grey);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+      & img {
+        transform: translateX(5px);
+      }
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  & .has-white-color {
+    & a {
+      &::after {
+        background-color: white;
+      }
+    }
+  }
+}

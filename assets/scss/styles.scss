@@ -21,6 +21,10 @@ body.admin-bar {
   max-height: calc(100vh - 32px);
 }
 
+#wpadminbar {
+  z-index: 25;
+}
+
 /* Base */
 @import './screens';
 @import './variables';
@@ -31,3 +35,4 @@ body.admin-bar {
 @import './components/admin-login';
 @import './components/buttons';
 @import './components/container';
+@import './components/navbar';
