@@ -1,3 +1,4 @@
 underline
 italic
 -translate-y-full
+scale-50
