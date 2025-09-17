@@ -3,18 +3,23 @@
     "file": "assets/LeagueSpartanVariable-6d17eb47.woff2",
     "src": "assets/fonts/LeagueSpartanVariable.woff2"
   },
+  "assets/img/frankielocal_logoblauwrand.png": {
+    "file": "assets/frankielocal_logoblauwrand-a026ff01.png",
+    "src": "assets/img/frankielocal_logoblauwrand.png"
+  },
   "main.css": {
-    "file": "assets/main-59711fe6.css",
+    "file": "assets/main-e72d875b.css",
     "src": "main.css"
   },
   "main.js": {
     "assets": [
-      "assets/LeagueSpartanVariable-6d17eb47.woff2"
+      "assets/LeagueSpartanVariable-6d17eb47.woff2",
+      "assets/frankielocal_logoblauwrand-a026ff01.png"
     ],
     "css": [
-      "assets/main-59711fe6.css"
+      "assets/main-e72d875b.css"
     ],
-    "file": "assets/main-c0dfe5ca.js",
+    "file": "assets/main-83e65c69.js",
     "isEntry": true,
     "src": "main.js"
   }

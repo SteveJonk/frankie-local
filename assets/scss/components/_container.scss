@@ -27,6 +27,12 @@
   }
 }
 
+.is-style-mobile-reverse {
+  @include Tablet {
+    flex-direction: column-reverse;
+  }
+}
+
 div.wp-block-group.has-background {
   padding: 0;
 }

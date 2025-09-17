@@ -25,6 +25,14 @@ register_block_style(
 );
 
 register_block_style(
+    'core/columns',
+    array(
+        'name'         => 'mobile-reverse',
+        'label'        => __('Mobile Reverse', 'textdomain'),
+    )
+);
+
+register_block_style(
     'core/cover',
     array(
         'name'         => 'zoom',
