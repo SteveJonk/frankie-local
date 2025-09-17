@@ -17,6 +17,11 @@
           "name": "Light Blue 2"
         },
         {
+          "slug": "dark-blue-3",
+          "color": "#224f7c",
+          "name": "Dark Blue 3"
+        },
+        {
           "slug": "brown",
           "color": "#DDAA52",
           "name": "Brown"
@@ -44,7 +49,22 @@
       ]
     },
     "custom": {},
-    "dimensions": {},
+    "dimensions": {
+      "aspectRatio": true,
+      "aspectRatios": [
+        {
+          "name": "Half - 2:1",
+          "slug": "half",
+          "ratio": "2/1"
+        },
+        {
+          "name": "Half - 1:2",
+          "slug": "half",
+          "ratio": "1/2"
+        }
+      ],
+      "defaultAspectRatios": true
+    },
     "position": {},
     "shadow": {},
     "spacing": {
@@ -55,24 +75,34 @@
       "fluid": true,
       "fontSizes": [
         {
-          "name": "Small",
-          "slug": "small",
+          "name": "Theme Small",
+          "slug": "theme-small",
           "size": "14px"
         },
         {
-          "name": "Medium",
-          "slug": "medium",
+          "name": "Theme Medium",
+          "slug": "theme-medium",
           "size": "18px"
         },
         {
-          "name": "Large",
-          "slug": "large",
-          "size": "32px"
+          "name": "Theme Medium Large",
+          "slug": "theme-medium-large",
+          "size": "22px"
         },
         {
-          "name": "Extra extra Large",
-          "slug": "xx-large",
-          "size": "36px"
+          "name": "Theme Large",
+          "slug": "theme-large",
+          "size": "34px"
+        },
+        {
+          "name": "Theme Extra Large",
+          "slug": "theme-x-large",
+          "size": "50px"
+        },
+        {
+          "name": "Theme Extra Extra Large",
+          "slug": "theme-xx-large",
+          "size": "60px"
         }
       ]
     },

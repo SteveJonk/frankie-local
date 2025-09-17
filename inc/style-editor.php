@@ -17,6 +17,11 @@ function theme_customize_register($wp_customize)
         'transport' => 'refresh',
     ));
 
+    $wp_customize->add_setting('theme_dark_blue_3', array(
+        'default'   => '#224f7c',
+        'transport' => 'refresh',
+    ));
+
     $wp_customize->add_setting('theme_brown', array(
         'default'   => '#DDAA52',
         'transport' => 'refresh',
@@ -47,6 +52,12 @@ function theme_customize_register($wp_customize)
         'label'    => __('Blauw 2', 'frankie-local'),
         'section'  => 'theme_colors',
         'settings' => 'theme_light_blue_2',
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'theme_dark_blue_3', array(
+        'label'    => __('Donkerblauw 3', 'frankie-local'),
+        'section'  => 'theme_colors',
+        'settings' => 'theme_dark_blue_3',
     )));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'theme_brown', array(
@@ -91,6 +102,11 @@ function filter_theme_json_theme($theme_json)
             'slug'  => 'light-blue-2',
             'color' => get_theme_mod('theme_light_blue_2', '#5F9AC6'),
             'name'  => __('Light Blue 2', 'frankie-local'),
+        ),
+        array(
+            'slug'  => 'dark-blue-3',
+            'color' => get_theme_mod('theme_dark_blue_3', '#224f7c'),
+            'name'  => __('Dark Blue 3', 'frankie-local'),
         ),
         array(
             'slug'  => 'brown',

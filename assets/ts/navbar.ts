@@ -4,15 +4,18 @@ export const navbar = () => {
   const menu = document.getElementById('menu');
   const closeMenuButton = document.getElementById('close-menu');
   const navbarLogo = document.getElementById('navbar-logo');
+  const navbarLogoBig = document.getElementById('navbar-logo-big');
 
   let lastScrollY = window.scrollY;
 
-  // Handle scroll events for navbar hide/show and logo resize
+  const SCROLL_LIMIT = 250;
+
+  // Handle scroll events for navbar hide/show
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
     // Hide/show navbar based on scroll direction
-    if (currentScrollY > lastScrollY && currentScrollY > 30) {
+    if (currentScrollY > lastScrollY && currentScrollY > SCROLL_LIMIT) {
       // Scrolling down and past 100px - hide navbar
       navbar?.classList.add('-translate-y-full');
     } else {
@@ -23,8 +26,28 @@ export const navbar = () => {
     lastScrollY = currentScrollY;
   };
 
-  // Add scroll event listener
   window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // IntersectionObserver to hide navbarLogo when navbarLogoBig is visible
+  if (navbarLogoBig && navbarLogo) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navbarLogo.style.opacity = '0';
+          } else {
+            navbarLogo.style.opacity = '1';
+          }
+        });
+      },
+      {
+        threshold: 0,
+        rootMargin: '0px 0px -10px 0px',
+      }
+    );
+
+    observer.observe(navbarLogoBig);
+  }
 
   navbarButton?.addEventListener('click', () => {
     if (menu?.classList.contains('opacity-0')) {

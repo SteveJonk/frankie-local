@@ -1,4 +1,13 @@
 .wp-block-button {
   &__link {
+    padding-bottom: 10px;
+    &.has-golden-yellow-background-color {
+      transition: all 0.2s ease-in-out;
+      border: 1px solid var(--wp--preset--color--golden-yellow);
+      &:hover {
+        background: transparent !important;
+        color: var(--wp--preset--color--golden-yellow) !important;
+      }
+    }
   }
 }
