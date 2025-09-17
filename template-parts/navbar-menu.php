@@ -1,6 +1,6 @@
-<a href="<?php echo home_url() ?>"><img src="<?php echo get_theme_mod('navbar_logo'); ?>"
-        class="z-30 absolute left-8 top-2 sm:block hidden" type="image/x-icon" alt="header logo" height="300"
-        width="300" loading="eager"></a>
+<a href="<?php echo home_url() ?>" class="z-30 absolute left-8 mt-2 sm:block hidden"><img
+        src="<?php echo get_theme_mod('navbar_logo'); ?>" type="image/x-icon" alt="header logo" height="300" width="300"
+        loading="eager"></a>
 
 <header id="navbar"
     class="fixed flex justify-between z-20 w-full py-4 px-8 transition-transform duration-100 ease-in-out bg-gradient-to-b from-black/20 to-transparent">
